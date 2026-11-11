@@ -14,13 +14,22 @@ AND ("Deep Learning"[Mesh] OR "Machine Learning"[Mesh] OR "Artificial Intelligen
 AND 2015:2026[dp]
 ```
 
-## IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, arXiv
+## IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar, arXiv (core string)
 
-The same four concept groups, adapted to each database's syntax:
+The core Boolean string, adapted to each database's syntax while keeping its four concept groups:
 
-- **Pneumonia:** pneumonia, "lung infection", "pulmonary infection"
-- **Imaging:** "chest X-ray", radiograph, "computed tomography", ultrasound
-- **Learning:** "deep learning", convolutional, transformer, Mamba, "state-space", "foundation model", "vision-language", "large language model"
-- **Task:** detection, classification, segmentation, "report generation"
+```
+(pneumonia OR "pulmonary infection" OR "lung infection")
+AND ("chest X-ray" OR "chest radiograph" OR radiograph* OR CT OR "computed tomography" OR "medical imaging")
+AND ("deep learning" OR "machine learning" OR CNN OR transformer* OR Mamba OR "state-space model*"
+     OR "vision-language model*" OR LLM OR "large language model*" OR "foundation model*")
+AND (detect* OR classif* OR diagnos* OR segment* OR "report generation" OR multimodal)
+```
 
-<!-- AUTHORS: paste the exact per-database strings you used here before release. -->
+## Targeted searches (all sources)
+
+Pneumonia terms combined with architecture-specific terms: "Vision Transformer", "Swin Transformer", Mamba, "state-space model", "vision-language", "foundation model".
+
+## Citation searching
+
+Reference lists of the included studies and of the earlier reviews compared in Table 1 of the paper.
